@@ -1,0 +1,50 @@
+.section {
+    display: flex;
+    width: 70%;
+    height: auto;
+    margin: 30px auto;
+    /* background-color: aqua; */
+    font-weight: 500;
+}
+.contenu h3 {
+    font-weight: bolder;
+    font-size: 1 rem;
+}
+.contenu p {
+    text-align: justify ;
+}
+.contenu {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+}
+.images {
+    display: flex;
+    width: 60%;
+    height: auto;
+    /* margin: 0 auto; */
+    align-items: flex-end;
+}
+
+.image1 {
+    border:  2px solid black;
+    border-radius: 15px;
+    height: 200px;
+    width: 40%;
+    overflow: hidden;
+    transform: rotate(-20deg);
+}
+.image2 {
+    border-radius: 15px;
+    height: 400px;
+    width: 60%;
+    overflow: hidden;
+}
+.renduImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
