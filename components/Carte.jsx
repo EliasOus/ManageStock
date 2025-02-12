@@ -16,6 +16,7 @@ export default function Carte({ titre, paragraphe, valeurBouton, srcImage1, srcI
                 <div className={styles.image2}>
                     <Image src={srcImage2} alt="image" className= {styles.renduImage} />
                 </div>
+
             </div>
         </section>
 
