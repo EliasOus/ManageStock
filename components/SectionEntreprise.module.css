@@ -1,0 +1,29 @@
+.section {
+  padding: 2.5rem 0;
+  background-color: #f3f4f6;
+  text-align: center;
+}
+
+.heading {
+  color: #4B5563;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.logo {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+} 
