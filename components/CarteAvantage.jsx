@@ -4,7 +4,7 @@ import styles from './CarteAvantage.module.css';
 const CarteAvantage = ({ imageSrc, title, description }) => {
   return (
     <div className={styles.card}>
-      <Image src={imageSrc} alt={title} width={60} height={60} />
+      <Image src={imageSrc} alt={title} ajoute quality={100} />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
     </div>

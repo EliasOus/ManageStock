@@ -23,7 +23,7 @@ const SectionEntreprises = () => {
             alt={entreprise.name}
             width={120}
             height={60}
-            className={styles.logo}
+            className={`${styles.logo} ${entreprise.name === "Burger King" ? styles.burgerKingLogo : ''}`}
           />
         ))}
       </div>

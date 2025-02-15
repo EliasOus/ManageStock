@@ -1,13 +1,12 @@
 .section {
   padding: 2.5rem 0;
-  background-color: #f3f4f6;
   text-align: center;
 }
 
 .heading {
   color: #4B5563;
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 900;
 }
 
 .logoContainer {
@@ -15,15 +14,24 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 5rem;
+  margin-bottom: 0;
+  width: 8%;
+  height: 8%;
 }
 
 .logo {
   filter: grayscale(100%);
   transition: filter 0.3s ease;
+  width: 8%;
+  height: 8%;
 }
 
 .logo:hover {
   filter: grayscale(0%);
+}
+
+.burgerKingLogo {
+  width: 5%;
+  height: 5%;
 } 
