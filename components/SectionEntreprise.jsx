@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from './SectionEntreprise.module.css';
 
 const entreprises = [
   { name: "RBC Financial Group", src: "/rbc-logo.png" },
@@ -10,11 +11,11 @@ const entreprises = [
 
 const SectionEntreprises = () => {
   return (
-    <section className="py-10 bg-gray-100 text-center">
-      <h2 className="text-gray-600 text-lg font-semibold">
+    <section className={styles.section}>
+      <h2 className={styles.heading}>
         Approuvé par +20 entreprises leaders dans le monde entier
       </h2>
-      <div className="flex flex-wrap justify-center items-center gap-6 mt-6">
+      <div className={styles.logoContainer}>
         {entreprises.map((entreprise, index) => (
           <Image
             key={index}
@@ -22,7 +23,7 @@ const SectionEntreprises = () => {
             alt={entreprise.name}
             width={120}
             height={60}
-            className="grayscale hover:grayscale-0 transition"
+            className={`${styles.logo} ${entreprise.name === "Burger King" ? styles.burgerKingLogo : ''}`}
           />
         ))}
       </div>
