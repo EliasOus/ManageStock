@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  width: 15%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0.8rem 0rem;
+}
+
+.description {
+  color: #4b5563ad;
+  margin-top: 0rem;
+  font-weight: 700;
+}
+
+.image {
+  width: 8rem;
+  height: 8rem;
+} 
