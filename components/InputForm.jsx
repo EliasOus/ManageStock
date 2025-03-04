@@ -1,3 +1,5 @@
+"use client";  // 👈 Add this line
+
 import { useState } from "react";
 import Button from "./Button";
 import styles from "./InputForm.module.css";
@@ -16,7 +18,6 @@ export default function InputForm({ className, inputFields }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logique de soumission à implémenter
     console.log("Form values:", inputValues);
   };
 
@@ -39,4 +40,4 @@ export default function InputForm({ className, inputFields }) {
       </div>
     </form>
   );
-} 
+}
