@@ -1,4 +1,4 @@
-"use client";  // 👈 Add this line
+"use client";  // 👈 Required for useState
 
 import { useState } from "react";
 import Button from "./Button";
@@ -24,19 +24,32 @@ export default function InputForm({ className, inputFields }) {
   return (
     <form onSubmit={handleSubmit} className={`${styles.form} ${className}`}>
       {inputFields.map((field, index) => (
-        <input
-          key={index}
-          type="text"
-          name={field.name}
-          value={inputValues[field.name]}
-          onChange={(e) => handleInputChange(field.name, e.target.value)}
-          placeholder={field.placeholder}
-          className={styles.input}
-        />
+        <div key={index}>
+          {field.name === "description" ? (
+            // Render a textarea for the description input
+            <textarea
+              name={field.name}
+              value={inputValues[field.name]}
+              onChange={(e) => handleInputChange(field.name, e.target.value)}
+              placeholder={field.placeholder}
+              className={`${styles.input} ${styles.textarea}`} // Apply additional CSS for larger input
+            />
+          ) : (
+            // Render a normal input field
+            <input
+              type="text"
+              name={field.name}
+              value={inputValues[field.name]}
+              onChange={(e) => handleInputChange(field.name, e.target.value)}
+              placeholder={field.placeholder}
+              className={styles.input}
+            />
+          )}
+        </div>
       ))}
       <div className={styles.buttonContainer}>
-        <Button texte="Enregistrer" type="submit" active={true}/>
-        <Button texte="Annuler" type="button" active={true}/>
+        <Button texte="Enregistrer" type="submit" active={true} />
+        <Button texte="Annuler" type="button" active={true} />
       </div>
     </form>
   );

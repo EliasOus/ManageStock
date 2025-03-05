@@ -15,4 +15,12 @@
 .buttonContainer {
   display: flex;
   gap: 1rem;
-} 
+}
+
+/* Update only the textarea to be longer horizontally and disable manual resizing */
+.textarea {
+  height: 100px;  /* Keep the current height */
+  width: 150%;    /* Make it 50% wider than the other inputs */
+  max-width: 600px; /* Optional: limit the maximum width */
+  resize: none;   /* Disable manual resizing */
+}
