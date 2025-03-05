@@ -17,9 +17,20 @@ export default function InputForm({ className, inputFields }) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form values:", inputValues);
-  };
+  e.preventDefault();
+
+  // Loop through all input fields to check if any field is empty
+  for (const [key, value] of Object.entries(inputValues)) {
+    if (!value.trim()) {
+      alert(`Please fill in the ${key} field.`);
+      return; // Stop submission if a field is empty
+    }
+  }
+
+  // If all fields are filled, proceed with the submission
+  console.log("Form values:", inputValues);
+};
+
 
   return (
     <form onSubmit={handleSubmit} className={`${styles.form} ${className}`}>
