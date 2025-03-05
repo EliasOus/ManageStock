@@ -35,8 +35,8 @@ export default function InputForm({ className, inputFields }) {
         />
       ))}
       <div className={styles.buttonContainer}>
-        <Button texte="Enregistrer" type="submit" />
-        <Button texte="Annuler" type="button" />
+        <Button texte="Enregistrer" type="submit" active={true}/>
+        <Button texte="Annuler" type="button" active={true}/>
       </div>
     </form>
   );
