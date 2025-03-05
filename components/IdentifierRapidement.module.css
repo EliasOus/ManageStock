@@ -1,0 +1,76 @@
+.cardContainer {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+ border-radius: 10px;
+ height: 25rem;
+ width: 70%;
+ background-image: linear-gradient(to top, #f8f8f8, white);
+ max-width: 800px;
+}
+
+.textContent {
+ flex: 1;
+ width: 50%;
+ padding-right: 20px;
+}
+
+.textContent h1 {
+ font-size: 21px;
+ font-weight: bold;
+ width: 85%;
+ padding-bottom: 20px;
+ text-align: justify;
+}
+
+.textContent p {
+ font-size: 14px;
+ color: #555;
+ width: 85%;
+ font-weight: bold;
+ margin-bottom: 15px;
+ text-align: justify;
+}
+
+.actionButton {
+ background-color: #ffb623;
+ color: black;
+ border: none;
+ padding: 5px 15px;
+ margin-top: 20px;
+ font-weight: bold;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+.imageContainer {
+ position: relative;
+ display: flex;
+ width: 30%;
+ align-items: center;
+ justify-content: center;
+}
+
+.backgroundImage {
+ border-radius: 10px;
+ width: 100%;
+ height: 300px;
+ border-radius: 12px;
+ background-color: rgb(186, 126, 126);
+ z-index: 1;
+}
+
+.overlayImage {
+ position: absolute;
+ bottom: -40px;
+ top: 175px;
+ right: 130px;
+ z-index: 2;
+ width: 170px;
+ transform: rotate(-10deg);
+ border-radius: 12px;
+ border-width: 2px;
+ border-color: black;
+ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
