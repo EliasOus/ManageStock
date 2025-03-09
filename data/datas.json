@@ -1,0 +1,146 @@
+{
+  "utilisateurs": [
+    {
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "nomUtilisateur": "jdupont",
+      "motDePass": "123456",
+      "poste": "Administrateur"
+    },
+    {
+      "nom": "Martin",
+      "prenom": "Sophie",
+      "nomUtilisateur": "smartin",
+      "motDePass": "abcdef",
+      "poste": "Gestionnaire"
+    },
+    {
+      "nom": "Lemoine",
+      "prenom": "Paul",
+      "nomUtilisateur": "plemoine",
+      "motDePass": "paul123",
+      "poste": "Utilisateur"
+    }
+  ],
+
+  "produits": [
+    {
+      "upeSku": "12345-ABC",
+      "nomArticle": "Filtre à huile",
+      "fournisseur": "Bosch",
+      "quantite": 50,
+      "prix": 12.99
+    },
+    {
+      "upeSku": "67890-DEF",
+      "nomArticle": "Plaquettes de frein",
+      "fournisseur": "Brembo",
+      "quantite": 30,
+      "prix": 45.0
+    },
+    {
+      "upeSku": "11223-GHI",
+      "nomArticle": "Batterie 12V",
+      "fournisseur": "Varta",
+      "quantite": 20,
+      "prix": 89.99
+    },
+    {
+      "upeSku": "44556-JKL",
+      "nomArticle": "Bougie d'allumage",
+      "fournisseur": "NGK",
+      "quantite": 100,
+      "prix": 8.5
+    }
+  ],
+  "produitsRupture": [
+    {
+      "upeSku": "98765-XYZ",
+      "nomArticle": "Amortisseur avant",
+      "fournisseur": "KYB",
+      "quantite": 0,
+      "prix": 75.0
+    },
+    {
+      "upeSku": "54321-PQR",
+      "nomArticle": "Courroie de distribution",
+      "fournisseur": "Dayco",
+      "quantite": 0,
+      "prix": 35.49
+    },
+    {
+      "upeSku": "23456-STU",
+      "nomArticle": "Filtre à air",
+      "fournisseur": "Mann-Filter",
+      "quantite": 0,
+      "prix": 18.99
+    },
+    {
+      "upeSku": "78901-VWX",
+      "nomArticle": "Pneu hiver 205/55R16",
+      "fournisseur": "Michelin",
+      "quantite": 0,
+      "prix": 120.0
+    }
+  ],
+  "receptions": [
+    {
+      "upeSku": "11111-AAA",
+      "nomArticle": "Filtre à huile",
+      "fournisseur": "Bosch",
+      "quantite": 100,
+      "date": "2025-03-01"
+    },
+    {
+      "upeSku": "22222-BBB",
+      "nomArticle": "Plaquettes de frein",
+      "fournisseur": "Brembo",
+      "quantite": 50,
+      "date": "2025-03-02"
+    },
+    {
+      "upeSku": "33333-CCC",
+      "nomArticle": "Amortisseur arrière",
+      "fournisseur": "KYB",
+      "quantite": 25,
+      "date": "2025-03-03"
+    },
+    {
+      "upeSku": "44444-DDD",
+      "nomArticle": "Bougie d'allumage",
+      "fournisseur": "NGK",
+      "quantite": 200,
+      "date": "2025-03-04"
+    }
+  ],
+  "retours": [
+    {
+      "upeSku": "55555-EEE",
+      "nomArticle": "Pneu été 195/65R15",
+      "fournisseur": "Bridgestone",
+      "quantite": 5,
+      "date": "2025-03-05"
+    },
+    {
+      "upeSku": "66666-FFF",
+      "nomArticle": "Filtre à carburant",
+      "fournisseur": "Mahle",
+      "quantite": 10,
+      "date": "2025-03-06"
+    },
+    {
+      "upeSku": "77777-GGG",
+      "nomArticle": "Batterie 12V",
+      "fournisseur": "Varta",
+      "quantite": 3,
+      "date": "2025-03-07"
+    },
+    {
+      "upeSku": "88888-HHH",
+      "nomArticle": "Essuie-glaces avant",
+      "fournisseur": "Valeo",
+      "quantite": 8,
+      "date": "2025-03-08"
+    }
+  ]
+}
