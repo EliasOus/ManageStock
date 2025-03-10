@@ -2,18 +2,21 @@
 .maDiv {
     height: 130px;
     width: 180px;
-    background-color: #F3F3F3;
+    background-color: #FFFFFF;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+    border: 1px solid rgb(0 0 0 /15%);
 }
 
 .chiffre {
     font-weight: 900;
     transform: translateX(20%);
     margin-bottom: 0;
+    width: 150px;
+    font-size: 1.3rem;
 }
 
 .titre {
@@ -21,4 +24,5 @@
     padding: 0px;
     margin-top: 0;
     transform: translateX(20%);
+    width: 150px;
 }
