@@ -1,0 +1,110 @@
+.contenaire{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.input {
+    position: absolute;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+    font-size: 1.2rem;
+    background-image: url('../public/magnifier_1.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Position de l'icône */
+    background-size: 20px; /* Taille de l'icône */
+    padding-left: 35px;   /* Espace à gauche pour l'icône */
+}
+
+.suggestions {
+    position: absolute;
+    top: 35px; /* Espace entre l'input et les suggestions */
+    width: 100%;
+    border: 1px solid #ddd;
+    background: white;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    padding-left: 30px
+}
+
+.suggestionItem{
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.suggestionItem:hover {
+    background-color: #f3f3f3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .section {
+    margin: 0 auto ;
+    margin-top: 200px;
+    height: 70px;
+    width: 80%;
+    background-color: #221E34;
+    position: relative;
+}
+
+.maDiv {
+    height: auto;
+    width: 98%;
+    background-color: #F3F3F3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    
+}
+.maDiv p {
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+.titre {
+    opacity: 0.6;
+    padding: 0px;
+    margin-top: 0;
+    transform: translateX(20%);
+} */
