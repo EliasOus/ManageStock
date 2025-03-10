@@ -1,0 +1,34 @@
+.section {
+    height: 150px;
+    width: 200px;
+    background-color: #221E34;
+    position: relative;
+}
+
+.maDiv {
+    height: 130px;
+    width: 180px;
+    background-color: #F3F3F3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.chiffre {
+    font-weight: bolder;
+    transform: translateX(20%);
+    margin-bottom: 0;
+}
+
+.titre {
+    opacity: 0.6;
+    padding: 0px;
+    margin-top: 0;
+    transform: translateX(20%);
+}
