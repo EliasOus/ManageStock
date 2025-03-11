@@ -9,7 +9,7 @@ import whatsapp from "@/public/whatsapp.svg";
 import Button from "@/components/Button";
 import { useActionState, useState } from "react";
 
-export default function ContactezNous() {
+export default function ContactezNous({ className }) {
   /**
    * Fonction de validation du formulaire de contact.
    * Vérifie si tous les champs du formulaire (nom, courriel, téléphone, message, etc.)
@@ -121,7 +121,7 @@ export default function ContactezNous() {
   };
 
   return (
-    <div className={style.ContactezNous}>
+    <div className={`${style.ContactezNous} ${className}`}>
       <h1>Contactez-Nous</h1>
       <div className={style.body}>
         <form action={formAction} className={style.form} noValidate>
