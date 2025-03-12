@@ -1,0 +1,66 @@
+.container {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header h1 {
+    color: #000000;
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+}
+
+.separator {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formSection {
+    padding-left: 80px;
+}
+
+.tableSection {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tableWrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tableHeader {
+    margin-bottom: 20px;
+}
+
+.tableHeader h2 {
+    font-size: 22px;
+    color: #000000;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+}
+
+.underline {
+    height: 4px;
+    background-color: #FFB623;
+    width: 300px;
+}
