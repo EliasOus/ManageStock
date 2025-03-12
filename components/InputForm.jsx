@@ -5,6 +5,7 @@ import Button from "./Button";
 import styles from "./InputForm.module.css";
 
 export default function InputForm({ className, inputFields }) {
+  const [visible, setVisible] = useState(true);
   const [inputValues, setInputValues] = useState(
     Object.fromEntries(inputFields.map(field => [field.name, ""]))
   );
@@ -17,38 +18,43 @@ export default function InputForm({ className, inputFields }) {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Loop through all input fields to check if any field is empty
-  for (const [key, value] of Object.entries(inputValues)) {
-    if (!value.trim()) {
-      alert(`Please fill in the ${key} field.`);
-      return; // Stop submission if a field is empty
+    // Loop through all input fields to check if any field is empty
+    for (const [key, value] of Object.entries(inputValues)) {
+      if (!value.trim()) {
+        alert(`Please fill in the ${key} field.`);
+        return; // Stop submission if a field is empty
+      }
     }
-  }
 
-  // If all fields are filled, proceed with the submission
-  console.log("Form values:", inputValues);
-};
+    // If all fields are filled, proceed with the submission
+    console.log("Form values:", inputValues);
+  };
 
+  // This function hides the form when Annuler is clicked
+  const handleAnnuler = () => {
+    setVisible(false);
+  };
+
+  // Only render the form if visible is true
+  if (!visible) return null;
 
   return (
     <form onSubmit={handleSubmit} className={`${styles.form} ${className}`}>
       {inputFields.map((field, index) => (
         <div key={index}>
           {field.name === "description" ? (
-            // Render a textarea for the description input
             <textarea
               name={field.name}
               value={inputValues[field.name]}
               onChange={(e) => handleInputChange(field.name, e.target.value)}
               placeholder={field.placeholder}
-              className={`${styles.input} ${styles.textarea}`} // Apply additional CSS for larger input
+              className={`${styles.input} ${styles.textarea}`}
             />
           ) : (
-            // Render a normal input field
             <input
-              type="text"
+              type={field.type || "text"}
               name={field.name}
               value={inputValues[field.name]}
               onChange={(e) => handleInputChange(field.name, e.target.value)}
@@ -60,7 +66,10 @@ export default function InputForm({ className, inputFields }) {
       ))}
       <div className={styles.buttonContainer}>
         <Button texte="Enregistrer" type="submit" active={true} />
-        <Button texte="Annuler" type="button" active={true} />
+        {/* Wrap the Annuler button in a div with onClick */}
+        <div onClick={handleAnnuler}>
+          <Button texte="Annuler" type="button" active={true} />
+        </div>
       </div>
     </form>
   );
