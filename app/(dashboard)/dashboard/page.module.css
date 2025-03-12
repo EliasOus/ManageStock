@@ -1,0 +1,15 @@
+
+.maDiv1 {
+    width: 80%;
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.madiv2{
+    margin: 100px auto;
+}
+.maDiv3 {
+    width: 80%;
+    margin: 0 auto ;
+}
