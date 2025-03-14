@@ -1,0 +1,49 @@
+.main {
+    margin-left: 250px;
+    min-height: 100vh;
+    padding: 40px 20px 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #332f2f;
+    margin-top: 10px;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+.formSection {
+    margin-bottom: 30px;
+    padding-left: 250px;
+}
+
+.tableSection {
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
