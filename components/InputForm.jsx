@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "./Button";
 import styles from "./InputForm.module.css";
 
-export default function InputForm({ className, inputFields }) {
+export default function InputForm({ className, inputFields, onCancel }) {
   const [visible, setVisible] = useState(true);
   const [inputValues, setInputValues] = useState(
     Object.fromEntries(inputFields.map(field => [field.name, ""]))
@@ -65,11 +65,17 @@ export default function InputForm({ className, inputFields }) {
         </div>
       ))}
       <div className={styles.buttonContainer}>
-        <Button texte="Enregistrer" type="submit" active={true} />
-        {/* Wrap the Annuler button in a div with onClick */}
-        <div onClick={handleAnnuler}>
-          <Button texte="Annuler" type="button" active={true} />
-        </div>
+        <Button 
+          texte="Enregistrer" 
+          type="submit" 
+          active={true} 
+        />
+        <Button 
+          texte="Annuler" 
+          type="button" 
+          active={true} 
+          onClick={onCancel}
+        />
       </div>
     </form>
   );
