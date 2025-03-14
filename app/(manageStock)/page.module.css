@@ -1,8 +1,103 @@
-.sectionBanner{
-    width: 100vw;
+.sectionBanner {
+    width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
-.sectionBanner img{
+.sectionBanner img {
     width: 100%;
+}
+
+.hook {
+    width: 40%;
+    position: absolute;
+    top: 44%;
+    left: 9%;
+    transform: translate(-9%, -50%);
+}
+
+.hook h1 {
+    color: white;
+}
+
+.hook h3 {
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.hook button {
+    border-radius: 10px;
+}
+
+.sectionAventage {
+    text-align: center;
+}
+
+.sectionAventage h1 {
+    font-weight: 900;
+}
+
+.sectionAventage h3 {
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.carteAventage {
+
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 13rem;
+}
+
+.sectionDecouver {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.sectionApropo,
+.sectionFaq {
+    margin-top: 6rem;
+    text-align: center;
+
+}
+
+.sectionApropo h1,
+.sectionFaq h1 {
+    font-weight: 900;
+}
+
+.bannerAporpo {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #221E34;
+    padding: 3rem 15rem;
+    height: 15rem;
+}
+
+.bannerAporpo img {
+    width: 30%;
+    height: 50%;
+
+}
+
+.bannerAporpo h3 {
+    color: white;
+    text-align: justify;
+    width: 50%;
+    font-size: 1.3rem;
+    margin: 0;
+}
+.sectionFaq{
+    margin-bottom: 6rem;
+}
+.questions{
+    margin-top: 3rem;
+}
+
+.questions p{
+    text-align: left !important;
 }
