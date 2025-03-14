@@ -1,0 +1,8 @@
+.sectionBanner{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.sectionBanner img{
+    width: 100%;
+}
