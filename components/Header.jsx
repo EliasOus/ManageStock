@@ -8,6 +8,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [isNavVisible, setNavVisible] = useState(false);
 
   const toggleNav = () => {
@@ -34,18 +41,34 @@ export default function Header() {
             <Link href="/">Accueil</Link>
           </li>
           <li>
-            <Link href="#">À propos</Link>
+            <Link
+              href="/#Apropos"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("Apropos");
+              }}
+            >
+              À propos
+            </Link>
           </li>
           <li>
-            <Link href="/evenements">Contact</Link>
+            <Link href="/contactez-nous">Contact</Link>
           </li>
           <li>
-            <Link href="#">FAQ</Link>
+            <Link
+              href="/#Faq"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("Faq");
+              }}
+            >
+              FAQ
+            </Link>
           </li>
         </ul>
         <div className={styles.buttons}>
-          <Button texte="S'inscrire" goToUrl={"/login"} />
-          <Button texte="Se connecter" active={true} goToUrl={"/inscription"} />
+          <Button texte="S'inscrire" goToUrl={"/inscription"} />
+          <Button texte="Se connecter" active={true} goToUrl={"/login"} />
         </div>
       </nav>
     </header>
