@@ -4,7 +4,8 @@ import { useState } from "react";
 import Button from "./Button";
 import styles from "./InputForm.module.css";
  
-export default function InputForm({ className, inputFields, nonAnnuler }) {
+export default function InputForm({ className, inputFields, annuler }) {
+  annuler = true
   const [visible, setVisible] = useState(true);
   const [inputValues, setInputValues] = useState(
     Object.fromEntries(inputFields.map(field => [field.name, ""]))
@@ -34,9 +35,8 @@ export default function InputForm({ className, inputFields, nonAnnuler }) {
  
   // This function hides the form when Annuler is clicked
   const handleAnnuler = () => {
-    if(!nonAnnuler){
-      setVisible(false);
-    }
+    if(!annuler){}
+    setVisible(false);
   };
  
   // Only render the form if visible is true
