@@ -22,9 +22,9 @@ export default function () {
         <div className={style.liens}>
           <h4>Liens Pratiques :</h4>
           <Link href="#">Accueil</Link>
-          <Link href="#">À propos</Link>
-          <Link href="#">Contact</Link>
-          <Link href="#">FAQ</Link>
+          <Link href="/#Apropos">À propos</Link>
+          <Link href="/contactez-nous">Contact</Link>
+          <Link href="/#Faq">FAQ</Link>
         </div>
         <div className={style.reseaux}>
           <h4>Réseaux sociaux :</h4>
