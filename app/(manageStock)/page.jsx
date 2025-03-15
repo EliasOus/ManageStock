@@ -19,7 +19,7 @@ import { redirect } from "next/dist/server/api-utils";
 export default function Home() {
   return (
     <>
-      <div className={styles.sectionBanner}>
+      <div className={styles.sectionBanner} id="Accueil">
         <Image src={banner} alt={"banner de la page d'accueil"} quality={100} />
         <div className={styles.hook}>
           <h1>
@@ -41,7 +41,7 @@ export default function Home() {
           {/* </div> */}
         </div>
       </div>
-      <div className={styles.sectionEntreprise}>
+      <div className={styles.sectionEntreprise} >
         <SectionEntreprises />
       </div>
       <div className={styles.sectionAventage}>
@@ -96,7 +96,7 @@ export default function Home() {
           estInverse={true}
         />
       </div>
-      <div className={styles.sectionApropo}>
+      <div className={styles.sectionApropo} id="Apropos">
         <h1>Qui sommes-nous ?</h1>
         <div className={styles.bannerAporpo}>
           <h3>
@@ -108,7 +108,7 @@ export default function Home() {
           <Image src={logoWhite} alt={"logo managestock white"} />
         </div>
       </div>
-      <div className={styles.sectionFaq}>
+      <div className={styles.sectionFaq} id="Faq">
         <h1>Questions Fréquentes</h1>
         <div className={styles.questions}>
           <FAQ
