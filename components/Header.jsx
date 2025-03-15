@@ -8,46 +8,46 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
- const [isNavVisible, setNavVisible] = useState(false);
+  const [isNavVisible, setNavVisible] = useState(false);
 
- const toggleNav = () => {
-  setNavVisible(!isNavVisible);
- };
+  const toggleNav = () => {
+    setNavVisible(!isNavVisible);
+  };
 
- return (
-  <header className={styles.header}>
-   <div className={styles.logo}>
-    <Image src={logo} alt="Logo ManageStock" className={styles.image} />
-   </div>
+  return (
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <Image src={logo} alt="Logo ManageStock" className={styles.image} />
+      </div>
 
-   <div onClick={toggleNav} className={styles.menuButton}>
-    <Image
-     src={btnMenu}
-     alt="Menu for small screens"
-     className={styles.menuIcon}
-    />
-   </div>
+      <div onClick={toggleNav} className={styles.menuButton}>
+        <Image
+          src={btnMenu}
+          alt="Menu for small screens"
+          className={styles.menuIcon}
+        />
+      </div>
 
-   <nav className={`${styles.nav} ${isNavVisible && styles.navActive}`}>
-    <ul className={styles.liste}>
-     <li>
-      <Link href="/">Accueil</Link>
-     </li>
-     <li>
-      <Link href="#">À propos</Link>
-     </li>
-     <li>
-      <Link href="/evenements">Contact</Link>
-     </li>
-     <li>
-      <Link href="#">FAQ</Link>
-     </li>
-    </ul>
-    <div className={styles.buttons}>
-     <Button texte="S'inscrire" />
-     <Button texte="Se connecter" active={true} />
-    </div>
-   </nav>
-  </header>
- );
+      <nav className={`${styles.nav} ${isNavVisible && styles.navActive}`}>
+        <ul className={styles.liste}>
+          <li>
+            <Link href="/">Accueil</Link>
+          </li>
+          <li>
+            <Link href="#">À propos</Link>
+          </li>
+          <li>
+            <Link href="/evenements">Contact</Link>
+          </li>
+          <li>
+            <Link href="#">FAQ</Link>
+          </li>
+        </ul>
+        <div className={styles.buttons}>
+          <Button texte="S'inscrire" goToUrl={"/login"} />
+          <Button texte="Se connecter" active={true} goToUrl={"/inscription"} />
+        </div>
+      </nav>
+    </header>
+  );
 }
