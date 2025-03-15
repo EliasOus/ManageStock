@@ -8,9 +8,9 @@
 .boutons {
     display: flex;
     gap: 20px;
-    margin: 25px;
+    width: 80%;
+    margin: 25px auto;
     justify-content: flex-end;
-    padding-right: 105px;
 }
 
 .dashboard {
