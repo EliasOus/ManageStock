@@ -1,20 +1,19 @@
-"use client";  // 👈 Required for useState
+"use client"; // 👈 Required for useState
  
 import { useState } from "react";
 import Button from "./Button";
 import styles from "./InputForm.module.css";
  
-export default function InputForm({ className, inputFields, annuler }) {
-  annuler = true
+export default function InputForm({ className, inputFields, NoAnnuler }) {
   const [visible, setVisible] = useState(true);
   const [inputValues, setInputValues] = useState(
-    Object.fromEntries(inputFields.map(field => [field.name, ""]))
+    Object.fromEntries(inputFields.map((field) => [field.name, ""]))
   );
  
   const handleInputChange = (name, value) => {
-    setInputValues(prev => ({
+    setInputValues((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
  
@@ -35,7 +34,6 @@ export default function InputForm({ className, inputFields, annuler }) {
  
   // This function hides the form when Annuler is clicked
   const handleAnnuler = () => {
-    if(!annuler){}
     setVisible(false);
   };
  
@@ -69,9 +67,15 @@ export default function InputForm({ className, inputFields, annuler }) {
       <div className={styles.buttonContainer}>
         <Button texte="Enregistrer" type="submit" active={true} />
         {/* Wrap the Annuler button in a div with onClick */}
-        <div onClick={handleAnnuler}>
-          <Button texte="Annuler" type="button" active={true} />
-        </div>
+        {NoAnnuler ? (
+          <div>
+            <Button texte="Annuler" type="button" active={true} />
+          </div>
+        ) : (
+          <div onClick={handleAnnuler}>
+            <Button texte="Annuler" type="button" active={true} />
+          </div>
+        )}
       </div>
     </form>
   );
