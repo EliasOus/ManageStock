@@ -14,6 +14,7 @@ import imgChart from "@/public/chart-img.png";
 import imgIdentifier from "@/public/identifiez-img.jpg";
 import imgSuivez from "@/public/suivez-img.png";
 import logoWhite from "@/public/Logo-White.png";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Home() {
   return (
@@ -30,7 +31,9 @@ export default function Home() {
             Un aperçu concis des métriques de vente pour suivre les progrès et
             identifier les axes d'amélioration.
           </h3>
-          <Button texte={"Commencez Maintenant"} active={true} />
+          {/* <div onClick={goToLogin}> */}
+            <Button texte={"Commencez Maintenant"} type="button" active={true} goToUrl={"/login"} />
+          {/* </div> */}
         </div>
       </div>
       <div className={styles.sectionEntreprise}>
