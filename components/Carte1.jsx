@@ -2,13 +2,13 @@ import styles from "./Carte1.module.css"
 import Image from "next/image"
 
 import Button from "./Button"
-export default function Carte1({ titre, paragraphe, texteButton, activeButton, srcImage1, srcImage2, estVisible, estInverse }) {
+export default function Carte1({ titre, paragraphe, texteButton, activeButton, btnGoToUrl, srcImage1, srcImage2, estVisible, estInverse}) {
     return <>
         <section className={`${styles.section} ${estInverse ? styles.inverse : ""}`}>
             <div className={`${styles.contenu} ${estInverse ? styles.contenuInverse : ""}`}>
                 <h3>{titre}</h3>
                 <p>{paragraphe}</p>
-                <Button texte={texteButton} active={activeButton}></Button>
+                <Button texte={texteButton} active={activeButton} goToUrl={btnGoToUrl}></Button>
             </div>
             <div className={`${styles.images} ${estInverse ? styles.imagesInverse : ""}`}>
                 {estVisible ?

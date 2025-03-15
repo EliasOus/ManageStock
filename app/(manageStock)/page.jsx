@@ -32,7 +32,12 @@ export default function Home() {
             identifier les axes d'amélioration.
           </h3>
           {/* <div onClick={goToLogin}> */}
-            <Button texte={"Commencez Maintenant"} type="button" active={true} goToUrl={"/login"} />
+          <Button
+            texte={"Commencez Maintenant"}
+            type="button"
+            active={true}
+            goToUrl={"/login"}
+          />
           {/* </div> */}
         </div>
       </div>
@@ -75,6 +80,7 @@ export default function Home() {
           texteButton={"Commencez Maintenant"}
           estVisible={true}
           activeButton={true}
+          btnGoToUrl={"/login"}
           srcImage1={imgChart}
           srcImage2={imgIdentifier}
         />
@@ -85,6 +91,7 @@ export default function Home() {
           }
           texteButton={"Découvrez notre solution"}
           activeButton={true}
+          btnGoToUrl={"/login"}
           srcImage2={imgSuivez}
           estInverse={true}
         />
