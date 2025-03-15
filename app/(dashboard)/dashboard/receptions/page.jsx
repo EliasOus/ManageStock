@@ -1,59 +1,40 @@
-"use client";
-import styles from "./page.module.css";
-import datas from "@/data/datas.json";
+"use client"
+import InfoBloc from "@/components/InfoBlock";
 import InputForm from "@/components/InputForm";
-import InfoBlock from "@/components/InfoBlock";
-import { useState } from "react";
+import style from "./page.module.css";
+import datas from "@/data/datas.json";
 
 export default function Receptions() {
-  const [visible, setVisible] = useState(true);
+  const inputFields = [
+    { name: "numerocommande", placeholder: "Entrez le numéro de commande" },
+    { name: "upesku", placeholder: "Upe/Sku" },
+    { name: "quantite", placeholder: "Quantité" },
+  ];
 
   return (
-    <main className={styles.main}>
-     
-        {/* Header section */}
-        <div className={styles.header}>
-          <h1>Gestion des Réceptions</h1>
-          <div className={styles.separator}></div>
-        </div>
-        
-       
+    <>
+      <h1 className={style.titre}>Gestion des réceptions</h1>
       
-          {/* Form Section */}
-          {visible && (
-            <div className={styles.formSection}>
-              <InputForm 
-                inputFields={[
-                  { name: "numeroCommande", placeholder: "Numero de commande", type: "text" },
-                  { name: "upeSku", placeholder: "Upe/Sku", type: "text" },
-                  { name: "quantite", placeholder: "Quantité", type: "number" }
-                ]}
-                onCancel={() => setVisible(false)}
-              />
-            </div>
-          )}
-          
-        
-          {/* Table Section */}
-            <InfoBlock 
-              defaultTitle="Réceptions"
-              defaultHeaders={[
-                "Upe/Sku", 
-                "Nom d'article", 
-                "Fournisseur", 
-                "Quantité", 
-                "Date"
-              ]}
-              data={datas.receptions.map(reception => ({
-                "Upe/Sku": reception.upeSku,
-                "Nom d'article": reception.nomArticle,
-                "Fournisseur": reception.fournisseur,
-                "Quantité": reception.quantite,
-                "Date": reception.date
-              }))}
-            />
-        
-   
-    </main>
+      <div className={style.inputform}>
+        <InputForm 
+          inputFields={inputFields} 
+          nonAnnuler={true}
+        />
+      </div>
+      
+      <div>
+        <InfoBloc
+          defaultTitle={"Receptions"}
+          defaultHeaders={[
+            "Upe/Sku",
+            "nomArticle",
+            "fournisseur",
+            "quantite",
+            "date",
+          ]}
+          data={datas.receptions}
+        />
+      </div>
+    </>
   );
 }
