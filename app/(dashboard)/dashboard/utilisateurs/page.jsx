@@ -17,11 +17,11 @@ export default function Utilisateur() {
      setInputVisible(false);
     };
    const inputFields = [
-    { name: "nom", placeholder: "Entrez le Upe/Sku" },
-    { name: "prenom", placeholder: "Entrez le nom de l'article" },
-    { name: "poste", placeholder: "Entrez la description" },
-    { name: "telephone", placeholder: "Entrez le fournisseur" },
-    { name: "Password", placeholder: "Entrez la catégorie" },
+    { name: "nom", placeholder: "Entrez votre nom" },
+    { name: "prenom", placeholder: "Entrez votre prenom" },
+    { name: "poste", placeholder: "Entrez le poste" },
+    { name: "telephone", placeholder: "Entrez le telephone" },
+    { name: "Password", placeholder: "Entrez le mot de passe" },
     ];
     return (
      <>

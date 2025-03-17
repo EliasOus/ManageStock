@@ -1,10 +1,10 @@
-"use client";  // 👈 Required for useState
+"use client"; // 👈 Required for useState
 
 import { useState } from "react";
 import Button from "./Button";
 import styles from "./InputForm.module.css";
 
-export default function InputForm({ className, inputFields, onClose }) {
+export default function InputForm({ className, inputFields, onClose, onAdd }) {
  const [inputValues, setInputValues] = useState(
   Object.fromEntries(inputFields.map((field) => [field.name, ""]))
  );
@@ -28,7 +28,8 @@ export default function InputForm({ className, inputFields, onClose }) {
   }
 
   // If all fields are filled, proceed with the submission
-  console.log("Form values:", inputValues);
+     console.log("Form values:", inputValues);
+     onAdd(inputValues);
  };
 
  return (
@@ -57,8 +58,15 @@ export default function InputForm({ className, inputFields, onClose }) {
      )}
     </div>
    ))}
-   <div className={styles.buttonContainer}>
-    <Button texte="Enregistrer" type="submit" active={true} />
+         <div  className={styles.buttonContainer}>
+             <div>
+                 <Button
+     texte="Enregistrer"
+     type="submit"
+     active={true}
+             />
+             </div>
+    
     <div onClick={onClose}>
      <Button texte="Annuler" type="button" active={true} />
     </div>
