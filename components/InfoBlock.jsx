@@ -28,7 +28,7 @@ export default function InfoBloc({ defaultTitle, defaultHeaders, data = [] }) {
       ))
      ) : (
       <tr>
-       <td colSpan={headers.length} className={style.noData}>
+       <td colSpan={defaultHeaders.length} className={style.noData}>
         Aucune donnée disponible
        </td>
       </tr>
