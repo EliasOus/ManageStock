@@ -1,0 +1,40 @@
+.infoBloc {
+ background-color: white;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ width: 80%;
+ margin: auto;
+}
+
+.tableTitle {
+ font-size: 20px;
+ font-weight: bold;
+ margin-bottom: 20px;
+ border-bottom: solid darkorange 4px;
+ width: 30%;
+}
+
+.infoTable {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+.infoTable th {
+ background-color: #e8e8e8;
+ padding: 10px;
+ text-align: left;
+ word-wrap: break-word;
+ white-space: normal;
+}
+
+.infoTable td {
+ padding: 10px;
+ border-top: 1px solid #ddd;
+}
+
+.noData {
+ text-align: center;
+ color: #888;
+ font-style: italic;
+}
