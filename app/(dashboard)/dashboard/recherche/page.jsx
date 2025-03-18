@@ -1,7 +1,29 @@
-export default function Recherche(){
-    return(
+import InfoBloc from "@/components/InfoBlock.jsx";
+import styles from "./page.module.css";
+import Recherche1 from "@/components/Recherche";
+
+import datas from "@/data/datas.json";
+
+export default function Recherche() {
+    return (
         <>
-        <h1>page rechreche</h1>
+            <div className={styles.divRecherche}>
+                <Recherche1 />
+            </div>
+            <div className={styles.infoBloc}>
+                <InfoBloc
+                    defaultTitle={"Recherche Article"}
+                    defaultHeaders={[
+                        "Upe/Sku",
+                        "Nom d’article",
+                        "Fournisseur",
+                        "Quantité",
+                        "Prix",
+                    ]}
+                    data={datas.produitsRupture}
+                />
+
+            </div>
         </>
     )
 }
