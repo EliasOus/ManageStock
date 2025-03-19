@@ -1,5 +1,11 @@
+
+.contenaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 100px;
+}
 .divRecherche{
-    /* width: 80%; */
-    margin: 0 auto;
+    margin-top: 30px;
 }
 
